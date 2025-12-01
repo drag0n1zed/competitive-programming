@@ -18,7 +18,7 @@ constexpr int MOD = 1e9 + 7;
 
 // Set to true for old USACO (file I/O), false for modern problems (stdin/stdout)
 constexpr bool USE_FILE_IO = true;
-constexpr auto FILENAME = "CHANGE_THIS";
+constexpr auto FILENAME = "blocks";
 
 void setup_io() {
     ios_base::sync_with_stdio(false);
@@ -33,6 +33,32 @@ void setup_io() {
 }
 
 void solve() {
+    int n;
+    cin >> n;
+    // Initialize a vector with length 0..25 (0 -> A, 1 -> B, etc)
+    vector<int> final_alphabets_count(26);
+
+    // Input
+    for (int i = 0; i < n; i++) {
+        string word1, word2;
+        cin >> word1 >> word2;
+        // Count which letters are required to construct the two words of each board
+        vector<int> count1(26);
+        vector<int> count2(26);
+        for (const auto c: word1) {
+            count1[c - 'a']++;
+        }
+        for (const auto c: word2) {
+            count2[c - 'a']++;
+        }
+        // Add maximum character usage for the two words into the final alphabet count
+        for (int j=0; j<26; j++) {
+            final_alphabets_count[j] += max(count1[j], count2[j]);
+        }
+    }
+    for (int i = 0; i < 26; i++) {
+        cout << final_alphabets_count[i] << '\n';
+    }
 }
 
 int main() {

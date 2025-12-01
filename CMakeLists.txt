@@ -9,8 +9,8 @@ add_executable(scratchpad scratchpad.cpp)
 # Optimization flags
 target_compile_options(scratchpad PRIVATE -O2 -Wall -Wextra)
 
-# Find include/bits/stdc++.h AND define LOCAL macro
-target_compile_definitions(scratchpad PRIVATE
-        PROJECT_ROOT="${CMAKE_SOURCE_DIR}"
-        LOCAL
-)
+# Find include/bits/stdc++.h
+target_include_directories(scratchpad PRIVATE ${CMAKE_SOURCE_DIR}/include)
+
+# define LOCAL macro and project root
+target_compile_definitions(scratchpad PRIVATE LOCAL)

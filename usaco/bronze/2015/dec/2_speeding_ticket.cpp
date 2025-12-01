@@ -79,7 +79,7 @@ void solve() {
 int main() {
     setup_io();
 
-    if (USE_FILE_IO && FILENAME == "CHANGE_THIS") {
+    if constexpr (USE_FILE_IO && FILENAME == "CHANGE_THIS") {
         cerr << "Error: you are in USE_FILE_IO mode but forgot to set the FILENAME variable!" << '\n';
         exit(1);
     }

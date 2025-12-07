@@ -6,8 +6,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(scratchpad scratchpad.cpp)
 
-# Optimization flags
-target_compile_options(scratchpad PRIVATE -O2 -Wall -Wextra)
+# Flags
+target_compile_options(scratchpad PRIVATE -O0 -Wall -Wextra)
 
 # Find include/bits/stdc++.h
 target_include_directories(scratchpad PRIVATE ${CMAKE_SOURCE_DIR}/include)

@@ -1,7 +1,3 @@
-// Fix for macOS where bits/stdc++.h doesn't exist
-#ifndef BITS_STDCPP_H
-#define BITS_STDCPP_H
-
 #ifndef _GLIBCXX_NO_ASSERT
 #include <cassert>
 #endif
@@ -20,8 +16,6 @@
 #include <cstdlib>
 #include <cstring>
 #include <ctime>
-#include <cwchar>
-#include <cwctype>
 
 #if __cplusplus >= 201103L
 #include <ccomplex>
@@ -35,6 +29,7 @@
 #include <cwctype>
 #endif
 
+// C++
 #include <algorithm>
 #include <bitset>
 #include <complex>
@@ -89,31 +84,3 @@
 #include <unordered_map>
 #include <unordered_set>
 #endif
-
-#if __cplusplus >= 201402L
-#include <shared_mutex>
-#endif
-
-#if __cplusplus >= 201703L
-#include <any>
-#include <charconv>
-#include <execution>
-#include <filesystem>
-#include <optional>
-#include <memory_resource>
-#include <string_view>
-#include <variant>
-#endif
-
-#if __cplusplus >= 202002L
-#include <bit>
-#include <compare>
-#include <concepts>
-#include <coroutine>
-#include <numbers>
-#include <ranges>
-#include <span>
-#include <version>
-#endif
-
-#endif // BITS_STDCPP_H

@@ -16,32 +16,15 @@ constexpr int INF = 1e9;
 constexpr ll INF64 = 1e18;
 constexpr int MOD = 1e9 + 7;
 
-// Set to true for old USACO (file I/O), false for modern problems (stdin/stdout)
-constexpr bool USE_FILE_IO = true;
-constexpr auto FILENAME = "CHANGE_THIS";
-
-void setup_io() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
-
-#ifndef LOCAL
-    if (USE_FILE_IO) {
-        freopen((string(FILENAME) + ".in").c_str(), "r", stdin);
-        freopen((string(FILENAME) + ".out").c_str(), "w", stdout);
-    }
-#endif
-}
-
 void solve() {
 }
 
 int main() {
-    setup_io();
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
 
-    if (USE_FILE_IO && FILENAME == "CHANGE_THIS") {
-        cerr << "Error: you are in USE_FILE_IO mode but forgot to set the FILENAME variable!" << '\n';
-        exit(1);
-    }
+    freopen("NAME.in"), "r", stdin);
+    freopen("NAME.out"), "w", stdout);
 
     int t = 1;
     // cin >> t; // Multiple test cases

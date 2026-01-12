@@ -1,0 +1,9 @@
+-Iinclude
+-std=c++17
+-O2
+-Wall
+-Wextra
+-Wpedantic
+-Wshadow
+-DLOCAL
+-g

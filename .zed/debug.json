@@ -1,0 +1,10 @@
+[
+  {
+    "label": "Debug current file",
+    "adapter": "CodeLLDB",
+    "request": "launch",
+    "program": "$ZED_WORKTREE_ROOT/$ZED_STEM.out",
+    "build": "C++: Build (Debug)",
+    "cwd": "$ZED_WORKTREE_ROOT",
+  },
+]

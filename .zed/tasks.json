@@ -1,13 +1,13 @@
 [
   {
-    "label": "build and run",
-    "command": "mkdir -p build && g++ -O2 -Wall -Wextra -Wshadow -std=c++17 $ZED_FILE -o build/$ZED_STEM.out && ./build/$ZED_STEM.out",
+    "label": "cpp build and run",
+    "command": "mkdir -p build && g++ -O2 -Wall -Wextra -Wshadow -std=c++17 $ZED_FILE -o cpp/build/$ZED_STEM.out && ./cpp/build/$ZED_STEM.out",
     "use_new_terminal": false,
     "reveal": "always",
   },
   {
-    "label": "build (debug)",
-    "command": "mkdir -p build && g++ -g -O0 -Wall -Wextra -Wshadow -std=c++17 -fsanitize=address -fsanitize=undefined -fno-sanitize-recover -D_GLIBCXX_DEBUG $ZED_FILE -o build/$ZED_STEM.out",
+    "label": "cpp build (debug)",
+    "command": "mkdir -p build && g++ -g -O0 -Wall -Wextra -Wshadow -std=c++17 -fsanitize=address -fsanitize=undefined -fno-sanitize-recover -D_GLIBCXX_DEBUG $ZED_FILE -o cpp/build/$ZED_STEM.out",
     "use_new_terminal": false,
     "reveal": "always",
   },
